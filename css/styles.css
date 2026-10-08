@@ -1,0 +1,15 @@
+/* Custom styles — Tailwind handles layout via CDN, this file adds polish */
+:root { color-scheme: light dark; }
+
+.reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
+}
+
+#modal { display: none; }
+#modal.open { display: flex; }
+
+.project-card img { aspect-ratio: 4 / 3; object-fit: cover; }
